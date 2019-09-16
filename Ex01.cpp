@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-int gcd(int a,int b){
+long long int gcd(long long int a,long long int b){
     if(b==0) return a;
     return gcd(b,a%b);
 }
@@ -11,12 +11,12 @@ int main(){
     int countTest;
     cin>>countTest;
     for(int i = 0;i<countTest;i++){
-        int a,b;
+        long long int a,b;
         cin>>a;
         cin>>b;
-        int gcd1;
+        long long int gcd1;
         gcd1 = gcd(a,b);
-        int lcm = a*b/gcd1;
+        long long int lcm = a*b/gcd1;
         cout<<lcm<<" "<<gcd1<<endl;
         
     }
