@@ -2,6 +2,8 @@
 //Find GCD(P,Q)
 //p = xx...x;q = yy..y
 
+//Tim ucln cua x,y
+//Ghi ra file lap lai 
 #include <iostream>
 using namespace std;
 

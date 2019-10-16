@@ -1,30 +1,13 @@
 /*
-    Hãy sinh ra tất cả các số nguyên tố trong khoảng [M, N].
+    Cho số tự nhiên N và số nguyên tố P. Nhiệm vụ của bạn là tìm số x lớn nhất để N! chia hết
+cho p x . Ví dụ với N=7, p=3 thì x=2 là số lớn nhất để 7! Chia hết cho 3^2 .
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T.
+Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là cặp số N, p được viết cách nhau một vài
+khoảng trống.
+T, N, p thỏa mãn rang buộc : 1≤T≤100; 1≤N≤10 5 ; 2≤p≤5000;
 */
 
- #include <iostream>
- #include <cmath>
- using namespace std;
+#include <iostream>
+using namespace std;
 
-bool isPrime(int n){
-    if(n<2) return false;
-    for(int i = 2;i<=sqrt(n);i++){
-        if(n%i==0) return false;
-
-    }
-    return true;
-}
-
-int main(){
-    int T;
-    cin>>T;
-    for(int i = 0;i<T;i++){
-        int M,N;
-        cin>>M>>N;
-        for(int j = M;j<=N;j++){
-            if(isPrime(j)) cout<<j<<" ";
-        }
-        cout<<endl;
-    }
-    return 0;
-}

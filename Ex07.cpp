@@ -5,8 +5,11 @@ là 1020 chia hết cho cả 2, 3, 5.
 */
 
 #include <iostream>
-using namespace std;
+#include <fstream>
 
+using namespace std;
+ifstream inp("inp.txt",ios::in);
+ofstream out("out.txt",ios::out);
 unsigned long long int pow10(int n){
     unsigned long long int res = 1;
     for(int i = 0;i<n-1;i++){
@@ -29,12 +32,12 @@ long long int smallestNumber(unsigned int x,unsigned int y,unsigned int z,unsign
 
 int main(){
     int T;
-    cin>>T;
+    inp>>T;
     for(int i = 0;i<T;i++){
         unsigned int x,y,z,n;
         int t = 0;
-        cin>>x>>y>>z>>n;
-        cout<<smallestNumber(x,y,z,n)<<endl;
+        inp>>x>>y>>z>>n;
+        out<<smallestNumber(x,y,z,n)<<endl;
     }
     // cout<<pow10(4)<<endl;
     return 0;

@@ -1,40 +1,35 @@
 /*
-    ho số tự nhiên N. Nhiệm vụ của bạn là hãy đưa ra ước số nguyên tố nhỏ nhất của các số từ
-1 đến N. Ví dụ n=10, ta có được kết quả : 1 2 3 2 5 2 7 2 3 2 .
+Cho bốn số M, N, A, B. Nhiệm vụ của bạn là hãy đếm tất cả các số trong khoảng [M, N]
+chia hết cho các số A, B.
+T, M, N, A, B thỏa mãn rang buộc 1≤T≤100; 1≤M, N ≤10 5 ; 1≤A, B ≤500;
+
+NOTE: Chia hết cho a hoặc b
 */
 
 #include <iostream>
-#include <cmath>
+#include <fstream>
+
 using namespace std;
 
-bool isPrime(unsigned int n){
-    if(n<2) return false;
-    for(int i =2;i<=sqrt(n);i++){
-        if(n%i==0) return false;
-    }
-    return true;
-}
-
-void smallestDivisors(int n){
-    for(int i = 1;i<=n;i++){
-        if(i==1) cout<<1<<" ";
-        for(int j = 2;j<=i;j++){
-            if(i%j==0) {
-                cout<<j<<" ";
-                break;
-            }
-        }
-    }
-    cout<<endl;
-}
+ifstream inp("inp.txt",ios::in);
+ofstream out("out.txt",ios::out);
 
 int main(){
-    int T;
-    cin>>T;
-    for(int i = 0;i<T;i++){
-        int N;
-        cin>>N;
-        smallestDivisors(N);
+
+    int countTest;
+    inp>>countTest;
+    for(int i = 0;i<countTest;i++){
+        int m,n,a,b;
+        inp>>m>>n>>a>>b;
+        int count = 0;
+        for(int i = m;i<=n;i++){
+            if(i%a==0 or i%b==0) count++;
+        }
+        out<<count<<endl;
     }
+    inp.close();
+    out.close();
+    cout<<"DONE!"<<endl;
     return 0;
+
 }
