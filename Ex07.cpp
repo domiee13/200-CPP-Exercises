@@ -4,6 +4,8 @@ hết đồng thời cho X, Y, Z. Ví dụ với X = 2, Y = 3, Z = 5, N = 4 ta t
 là 1020 chia hết cho cả 2, 3, 5.
 */
 
+//Qua thoi gian
+
 #include <iostream>
 #include <fstream>
 

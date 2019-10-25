@@ -1,1 +1,1 @@
-            // if(s[i]=='0') s.erase(i,1);
+        cout<<s<<endl;

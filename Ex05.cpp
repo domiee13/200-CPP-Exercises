@@ -4,6 +4,8 @@
 
 //Tim ucln cua x,y
 //Ghi ra file lap lai 
+
+//Chua lam duoc
 #include <iostream>
 using namespace std;
 

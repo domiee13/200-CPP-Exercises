@@ -2,6 +2,7 @@
 Cho hai số a và b trong đó a≤10 12 , b≤10 250 . Nhiệm vụ của bạn là tìm ước số chung
 lớn nhất của hai số a, b.
 */
+//chua lam duoc
 
 #include <iostream>
 #include <fstream>

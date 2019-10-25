@@ -1,7 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <fstream>
+
 using namespace std;
+
+ifstream inp("inp.txt",ios::in);
+ofstream out("out.txt",ios::out);
 
 int main(){
     // vector<int> arr;
@@ -13,9 +18,20 @@ int main(){
     // long a = pow(10,9);
     // cout<<a<<endl;
     // return 0;
-    vector<int> a;
-    for(int i = 0;i<10;i++){
-        a.push_back(0);
+    // vector<int> a;
+    // for(int i = 0;i<10;i++){
+    //     a.push_back(0);
+    // }
+    // cout<<a.size()<<endl;
+    // string inp;
+    // cin>>inp;
+    // for(char ch: inp){
+    //     cout<<ch<<endl;
+    // }
+    int countTest;
+    inp>>countTest;
+    string line;
+    while(getline(inp,line)){
+        cout<<line<<endl;
     }
-    cout<<a.size()<<endl;
 }

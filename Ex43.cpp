@@ -45,8 +45,8 @@ int main(){
         int maxOfArr = *max_element(arr.begin(),arr.end());
         for(int i = 0;i<maxOfArr;i++){
             tmp = fibonacci(i);
-            int *p1,*p2;
             if(find(arr.begin(),arr.end(),tmp)!=arr.end() and find(res.begin(),res.end(),tmp)== res.end() )
+            //Nếu phần tử đó có trong mảng và chưa có trong mảng kết quả
             {
                 out<<tmp<<" ";
                 res.push_back(tmp);
