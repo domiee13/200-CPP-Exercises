@@ -20,3 +20,18 @@ bool isPrime(int n){
     return true;
 }
 
+int main(){
+    int countTest;
+    inp>>countTest;
+    for(int i = 0;i<countTest;i++){
+        int l,r;
+        inp>>l>>r;
+        int count = 0;
+        for(int i = l;i<=r;i++){
+            if(isPrime(i)) count++;
+        }
+        out<<count<<endl;
+        count = 0;
+    }
+    return 0;
+}
