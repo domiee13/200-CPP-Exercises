@@ -13,6 +13,7 @@ using namespace std;
 ifstream inp("inp.txt",ios::in);
 ofstream out("out.txt",ios::out);
 
+//Bien toan cuc nen moi khi xong 1 test case phai clear
 vector<int> a;
 
 
@@ -42,7 +43,9 @@ int main(){
         inp>>n;
         if(checkSphenicNum(n) and a.size()==3) out<<1<<endl;
         else out<<0<<endl;
-        a.clear();//Neu khong cac test case sau se sai vi chi them phan tu vao a
+        a.clear();
+        //Bien toan cuc nen moi khi xong 1 test case phai clear
+        //Neu khong cac test case sau se sai vi chi them phan tu vao a
     }
     for(int i = 0;i<a.size();i++){
         cout<<a[i]<<endl;
