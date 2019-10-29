@@ -8,6 +8,8 @@ using namespace std;
 ifstream inp("inp.txt",ios::in);
 ofstream out("out.txt",ios::out);
 
+void swap(int &a, int &b);
+
 int main(){
     // vector<int> arr;
     // for(int i = 0;i<10;i++){
@@ -28,10 +30,20 @@ int main(){
     // for(char ch: inp){
     //     cout<<ch<<endl;
     // }
-    int countTest;
-    inp>>countTest;
-    string line;
-    while(getline(inp,line)){
-        cout<<line<<endl;
-    }
+    // int countTest;
+    // inp>>countTest;
+    // string line;
+    // while(getline(inp,line)){
+    //     cout<<line<<endl;
+    // }
+    int a = 5;
+    int b = 10;
+    swap(a,b);
+    cout<<a<<b<<endl;
+}
+
+void swap(int &a, int &b){
+    int tmp = a;
+    a = b;
+    b = tmp;
 }
