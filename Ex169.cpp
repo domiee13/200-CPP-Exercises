@@ -6,7 +6,6 @@ dụ S =”ACCBA10D2EW30” ta nhận được kết quả: “AABCCDEW6”.
 
 #include <iostream>
 #include <fstream>
-#include <ctype.h>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -32,13 +31,11 @@ int main(){
         inp>>s;
         //Xu ly yeu cau de bai
         vector<int> num;
-        string res;
         for(int i = 0;i<s.length();i++){
-            if(isdigit(s[i])){
+            while(isdigit(s[i])){
                 num.push_back(int(s[i])-'0');
                 s.erase(i,1);
             }
-            if(s[i]=='0') s.erase(i,1);
         }
         sort(s.begin(),s.end());
         out<<s+to_string(sum(num))<<endl;

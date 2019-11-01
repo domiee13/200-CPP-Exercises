@@ -15,9 +15,9 @@ int main(){
     int countTest;
     inp>>countTest;
     for(int i = 0;i<countTest;i++){
-        int n;
+        long long int n;
         inp>>n;
-        for(int i = 2;i<=n;i++){
+        for(long long int i = 2;i<=n;i++){
             while(n%i==0){
                 out<<i<<" ";
                 n/=i;
